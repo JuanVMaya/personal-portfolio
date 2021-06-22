@@ -2,23 +2,25 @@
     display: flex;
     width: 80%;
     margin: auto;
-    height: 10vh;
+    height: 8vh;
     align-items: center;
     box-shadow: 0px 25px 10px -30px rgba(81,196,211,0.58);
     justify-content: space-between;
+    font-size: 0.75rem;
 }
 nav{
-    width: 50%;    
-    display: inline-flex;
+    width: 50%; 
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .logo{
     width: 30%;
 }
 .navLink {
-    color: #D8E3E7;
-	text-decoration: none;
-    transition: 0.4s ease-out;
+    text-decoration: none;
+    color: #D8E3E7;	
+    transition: 0.3s ease-out;
 }
 .navLink:hover,
 .navLink:focus{
@@ -26,6 +28,7 @@ nav{
 }
 .contactButton{
     font-family: inherit;
+    font-size: 0.75rem;
     color: #132C33;
     padding: 0.25rem 1rem;
     border-radius: 25px;

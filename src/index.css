@@ -7,10 +7,13 @@
 
   --ff--primary: 'Poppins',sans-serif;
   --ff--accent: 'Playfair Display', serif;
+
+  font-size: 18px;
 }
 * {
   box-sizing: border-box;
   margin:0;
+  padding: 0;
 }
 
 body {
