@@ -1,0 +1,12 @@
+.landingPage{
+    display:flex;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;    
+    justify-content: space-between;
+    align-items: center;
+}
+.thinkerImg{
+    max-width: 80%;
+    height: auto;
+}
