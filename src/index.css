@@ -23,10 +23,6 @@ body {
 }
 h1,h2,h3{
   font-family: var(--ff--accent);
-  color: #D8E3E7;
   font-weight: 700;
   line-height: 1;
-}
-p{
-  color: #D8E3E7;
 }
