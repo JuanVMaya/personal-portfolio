@@ -20,7 +20,7 @@ nav{
 .navLink {
     text-decoration: none;
     color: #D8E3E7;	
-    transition: 0.3s ease-out;
+    transition: 0.15s ease-out;
 }
 .navLink:hover,
 .navLink:focus{
