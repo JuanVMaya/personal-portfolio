@@ -1,4 +1,5 @@
 .landingPage{
+    position: relative;
     display:flex;
     color:#126E82;
     background-color: #D8E3E7;
@@ -9,17 +10,30 @@
     justify-content: space-between;
     align-items: center;
 }
+.sectionTitle{
+    position: absolute;
+    top:2vh;
+}
 .description{
+    height: 100vh;
     max-width: 40%;
+    z-index: 2;
 }
 .aboutMe{
-    padding: 3vh 0 0;
-    font-size: 2.25vh;
+    padding: 12vh 0 0;
     text-align: justify;
-    text-justify: inter-word;
     color:#132C33;
 }
 .disciplines{
     max-width: 50%;
     height: auto;
+    z-index: 2;
+}
+.backgroundDetail{    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: auto;
+    z-index: 1;
 }

@@ -7,8 +7,6 @@
 
   --ff--primary: 'Poppins',sans-serif;
   --ff--accent: 'Playfair Display', serif;
-
-  font-size: 18px;
 }
 * {
   box-sizing: border-box;
@@ -18,11 +16,11 @@
 
 body {
   font-family: var(--ff--primary);
-  font-weight: 200;
   background-color: #132C33;
 }
 h1,h2,h3{
   font-family: var(--ff--accent);
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
 }
