@@ -4,7 +4,7 @@ import backgroundDetail from '../assets/AboutBackground.svg'
 
 const About = () => {
     return (
-        <section className={classes.landingPage}>
+        <section className={classes.aboutPage}>
             <h1 className={classes.sectionTitle}>About</h1>
             <div className={classes.description}>
                 <p className={classes.aboutMe}>
