@@ -26,22 +26,3 @@ nav{
 .navLink:focus{
     color: #51C4D3;
 }
-.contactButton{
-    font-family: inherit;
-    color: #132C33;
-    padding: 0.25rem 1rem;
-    border-radius: 25px;
-    border: none ;
-    transition: 0.15s ease-out;
-}
-.contactButton:hover,
-.contactButton:focus{
-    transform: translateY(-0.15rem);
-    background-color: #51C4D3;
-    box-shadow: 0 3px 2px rgba(169, 209, 214, 0.58);
-    outline: -2px solid #c7c8c9;
-}
-.contactButton:active{
-    transform: translateY(0.15rem);
-    box-shadow: none;
-}

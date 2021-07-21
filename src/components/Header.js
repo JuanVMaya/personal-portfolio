@@ -1,4 +1,5 @@
 import classes from './Header.module.css'
+import Button from './UI/Button';
 
 const Header = () => {
     return (
@@ -8,9 +9,7 @@ const Header = () => {
                 <a className={classes.navLink} href="#">About</a>
                 <a className={classes.navLink} href="#">Projects</a>
                 <a className={classes.navLink} href="#">Blog</a>
-                <button class={classes.contactButton}>
-                    <span>CONTACT</span>
-                </button>
+                <Button>Contact</Button>
             </nav>
         </header>
     );
