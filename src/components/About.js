@@ -14,8 +14,8 @@ const About = () => {
                     tools to build the future of the internet.
                 </p>
             </div>
-            <img className={classes.disciplines} src={disciplines} alt='A person beside a world of spinning geometric figures' />
-            <img className={classes.backgroundDetail} src={backgroundDetail} alt='A geometric backrgound representing a downhill landscape' />
+            <img className={classes.disciplines} src={disciplines} alt='A website mock-up, a circuit diagram and a mobile app' />
+            <img className={classes.backgroundDetail} src={backgroundDetail} alt='A geometric background representing a downhill landscape' />
         </section>
     );
 };
