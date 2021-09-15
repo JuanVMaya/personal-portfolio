@@ -1,0 +1,52 @@
+.footerContainer{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    color:#D8E3E7;
+    background-color: #132C33;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    padding: 0 10%;
+}
+.footerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vh 0 1vh 0;
+}
+.leftContainer{
+    align-self: center;
+    max-width: 50%;
+    justify-items: center;
+}
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+}
+.socialLogosContainer{
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    margin: 0 3vh;
+}
+.logoContainer{
+    max-width: 30%;
+    padding: 0 2vh 2vh 0;
+}
+.socialIcon{
+    height: 0.5vh;
+    width: 0.5vh;
+}
+.socialIcon:hover{
+    opacity: 60%;
+}
+.downloadResume{
+    margin:auto;
+}
+.copyrightSection{
+    align-self: center;
+    font-size: 0.8rem;
+}
