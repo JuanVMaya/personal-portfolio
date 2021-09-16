@@ -34,11 +34,7 @@
 }
 .logoContainer{
     max-width: 30%;
-    padding: 0 2vh 2vh 0;
-}
-.socialIcon{
-    height: 0.5vh;
-    width: 0.5vh;
+    padding: 0 2vh 2vh 2vh;
 }
 .socialIcon:hover{
     opacity: 60%;
