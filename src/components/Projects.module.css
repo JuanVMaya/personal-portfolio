@@ -14,6 +14,7 @@
     color: #D8E3E7;
 }
 .thumbnail{
+    border-radius: 10px;
     max-width: 100%;
     height: auto;
     margin: 2vh 0;
