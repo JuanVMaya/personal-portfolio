@@ -12,18 +12,39 @@
   box-sizing: border-box;
   margin:0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--ff--primary);
   background-color: #132C33;
+  font-size: 1.5rem;
 }
 h1,h2{
   font-family: var(--ff--accent);
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 900;
   line-height: 1;
 }
 h3{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0.8vw;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background:transparent; 
+  border-radius: 30px;
+  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(173, 171, 171, 0.39); 
+  border-radius: 20px;
+  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #51c4d39a; 
+  border-radius: 20px;
 }

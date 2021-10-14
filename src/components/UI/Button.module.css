@@ -1,6 +1,6 @@
 .button{
     font-family: inherit;
-    font-size: 1rem;
+    font-size: inherit;
     background-color: #c7c8c9;
     color: #132C33;
     padding: 0.25rem 1rem;

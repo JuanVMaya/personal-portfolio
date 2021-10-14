@@ -21,7 +21,7 @@ const Footer = () => {
                             <SocialIcon url="https://twitter.com/JuanVMaya" bgColor="#c7c8c9" style={{height:35, width:35}} className={classes.socialIcon} />
                         </div>
                         <div className={classes.logoContainer}>
-                            <SocialIcon url="https://github.com/jvane1" bgColor="#c7c8c9" style={{height:35, width:35}} className={classes.socialIcon} />
+                            <SocialIcon url="https://github.com/juanvmaya" bgColor="#c7c8c9" style={{height:35, width:35}} className={classes.socialIcon} />
                         </div>
                         <div className={classes.logoContainer}>
                             <SocialIcon url="https://www.linkedin.com/in/juan-jose-vanegas-maya/" bgColor="#c7c8c9" style={{height:35, width:35}} className={classes.socialIcon} />
