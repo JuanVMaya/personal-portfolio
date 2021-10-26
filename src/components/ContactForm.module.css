@@ -1,0 +1,142 @@
+.background {
+display: flex;
+min-height: 100vh;
+}
+
+.screen:after {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+left: 20px;
+right: 20px;
+bottom: 0;
+border-radius: 15px;
+box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+z-index: -1;
+}
+
+.screenBody {
+display: flex;
+}
+
+.screenBodyItem {
+flex: 1;
+padding: 2vh;
+}
+
+.screenBodyItemLeft {
+display: flex;
+flex-direction: column;
+}
+
+.appTitle {
+display: flex;
+flex-direction: column;
+position: relative;
+color: #132C33;
+font-size: inherit;
+}
+
+.appTitle:after {
+content: '';
+display: block;
+position: absolute;
+left: 0;
+bottom: -0.75vh;
+width: 2.5vh;
+height: 4px;
+background: #132C33;
+}
+
+.appContact {
+margin-top: auto;
+font-size: 0.8rem;
+color: #132C33;
+}
+
+.appFormGroup {
+margin-bottom: 1vh;
+}
+
+.appFormGroupMessage {
+margin-top: 1.25vh;
+}
+
+.appFormGroupButtons {
+margin-bottom: 0;
+text-align: right;
+}
+
+.appFormControl {
+width: 100%;
+padding: 0.75vh 0;
+background: none;
+border: none;
+border-bottom: 0.1rem solid #666;
+color: #132C33;
+font-size: 1rem;
+text-transform: uppercase;
+outline: none;
+transition: border-color .2s;
+}
+
+.appFormControl::placeholder {
+color: #666;
+}
+
+.appFormControl:focus {
+border-bottom-color: #ddd;
+}
+
+.appFormButton {
+background: none;
+border: none;
+color: #224d58;
+font-size: 1rem;
+cursor: pointer;
+outline: none;
+padding-left: 0.5vh;
+font-weight: bold;
+}
+.appFormButton:hover {
+    color: #132C33;
+}
+
+
+.cancelButton{
+    background-color: #666;
+}
+
+@media screen and (max-width: 520px) {
+.screenBody {
+    flex-direction: column;
+}
+
+.screenBodyItemLeft {
+    margin-bottom: 1vh;
+}
+
+.appTitle {
+    flex-direction: row;
+}
+
+.appTitle span {
+    margin-right: 0.5vh;
+}
+
+.appTitle:after {
+    display: none;
+}
+}
+
+@media screen and (max-width: 600px) {
+.screenBody {
+    padding: 2vh;
+}
+
+.screenBodyItem {
+    padding: 0;
+}
+}
+  
