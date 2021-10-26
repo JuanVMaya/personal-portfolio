@@ -21,8 +21,6 @@ const ContactForm = (props) => {
     }
     return (
         <Modal onClose={props.onClose}>
-            <div></div>
-            <div></div>
             <div className={classes.screenBody}>
                 <div className={`${classes.screenBodyItem} ${classes.screenBodyItemLeft}`}>
                     <div className={classes.appTitle}>

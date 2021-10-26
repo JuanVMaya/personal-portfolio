@@ -31,7 +31,7 @@ h3{
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 0.8vw;
+  width: 0.6vw;
 }
 /* Track */
 ::-webkit-scrollbar-track {

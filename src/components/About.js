@@ -2,9 +2,10 @@ import classes from './About.module.css'
 import disciplines from '../assets/Disciplines.svg'
 import backgroundDetail from '../assets/AboutBackground.svg'
 
-const About = () => {
+const About = (props) => {
+    
     return (
-        <section className={classes.aboutPage}>
+        <section className={classes.aboutPage} ref={props.myRef}>
             <h1 className={classes.sectionTitle}>About</h1>
             <div className={classes.description}>
                 <p className={classes.aboutMe}>
