@@ -7,7 +7,7 @@ const Landing = () => {
             <div className={classes.myDescription}>
                 <p>Hello, I'm</p>
                 <h1>Juan Maya</h1>
-                <p>_____ Developer</p>
+                <p>Software Developer</p>
             </div>
             <img className={classes.thinkerImg} src={thinker} alt='A person beside a world of spinning geometric figures' />
         </section>

@@ -1,23 +1,45 @@
 .projectsPage{
     position: relative;
-    display:flex;
-    justify-content: space-between;
     color:#132C33;
     background-color: #132C33;
     width: 100%;
-    height: 100vh;
     padding: 0 10%;
+    overflow: hidden;
+}
+.showMore{
+    height: 185vh;
+    transition: ease-in-out .5s;
+}
+.showLess{
+    height: 100vh;
+    transition: ease-in-out .5s;
+}
+.cardSection{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10vh;
 }
 .sectionTitle{
     position: absolute;
     top:2vh;
     color: #D8E3E7;
 }
+.viewAllButton{
+    position:absolute;
+    align-items: center;
+    align-self: center;
+    z-index: 3;
+}
 .thumbnail{
-    width: 95%;
-    border-radius: 10px;
+    width: 100%;
     height: auto;
+    border-radius: 10px;
     margin: 2vh 0;
+}
+.thumbnail:hover{
+    transform: scale(1.03);
+    transition: ease 500ms;
 }
 .projectDescription{
     width: 95%;
@@ -25,13 +47,11 @@
     overflow:auto;
     overflow-x: hidden;
     text-overflow: ellipsis;
-    scrollbar-color: transparent;
-    scrollbar-width: thin;
 }
 .learnMoreContainer{
     justify-self:flex-end;
     margin-top: auto;
-    padding: 2vh 0;
+    padding: 2vh 0 0 0;
 }
 .backgroundDetail{    
     position: absolute;
