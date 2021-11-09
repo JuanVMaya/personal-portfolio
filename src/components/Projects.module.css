@@ -25,6 +25,10 @@
     top:2vh;
     color: #D8E3E7;
 }
+.thumbnailContainer{
+    padding: 0 1vw;
+    width: 100%;
+}
 .viewAllButton{
     position:absolute;
     align-items: center;
@@ -39,7 +43,7 @@
 }
 .thumbnail:hover{
     transform: scale(1.03);
-    transition: ease 500ms;
+    transition: ease-in 50ms;
 }
 .projectDescription{
     width: 95%;

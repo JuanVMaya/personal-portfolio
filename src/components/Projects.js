@@ -26,23 +26,23 @@ const ProjectData = [
         title: 'Self-Driving Module',
         thumbnail: require('../assets/CyberworksT7.png').default,
         altText: 'Inside Circuitry in Tennant T7 ride-on floor scrubber',
-        description: 'Cyberworks collaborates with Seneca Innovation and the School of Electronics & Mechanical Engineering Technology, Sustainable Seneca to develop a modular and flexible design compatible with multiple other floor cleaning models, which will enable Cyberworks to launch several new retrofit offerings to expand their customer base. Through the School of Electronics & Mechanical Engineering and the Applied Research Department, we received funding to develop the autonomous module compatible with multiple machines.',
+        description: 'Cyberworks collaborates with Seneca Innovation and the School of Electronics & Mechanical Engineering Technology, Sustainable Seneca to develop a modular and flexible design compatible with multiple other floor cleaning models, which will enable Cyberworks to launch several new retrofit offerings to expand their customer base. Through the research, we received developed the autonomous module compatible with multiple machines.',
         learnMoreLink: 'https://www.senecacollege.ca/news-and-events/seneca-news/robotic-floor-cleaner-soon-to-drive-itself-at-seneca.html',
     },
     {
         id: '4',
-        title: 'Personal Portfolio',
-        thumbnail: require("../assets/Thinker.svg").default,
+        title: 'Poker Game',
+        thumbnail: require("../assets/PokerGame.jpeg").default,
         altText: 'Thumbnail of personal portfolio',
-        description: 'This website is a compilation of materials that exemplifies my beliefs, skills, qualifications, education, training and experiences. It provides insight into my personality and work ethic.This is a representation of self-taught all-in-one project. It includes technolgies and tools such such as Figma, HTML, CSS, React, Firebase and GitHub.',
-        learnMoreLink: 'https://github.com/jvane1/personal-portfolio',
+        description: 'This project is a version of an automated poker game for 2-5 players. It provides insight into the experience with python programming language. Once run, the programe will prompt for the number of players that will play, simulate the game and list the winners alogn with the best hand. The game does have a list of the possible hands and list the player id winner and the winning hand',
+        learnMoreLink: 'https://github.com/JuanVMaya/PokerGame',
     },
     {
         id: '5',
-        title: 'Portfolio',
-        thumbnail: require("../assets/PersonalPortfolio.png").default,
-        altText: 'Thumbnail of personal portfolio',
-        description: 'This website is a compilation of materials that exemplifies my beliefs, skills, qualifications, education, training and experiences. It provides insight into my personality and work ethic.This is a representation of self-taught all-in-one project. It includes technolgies and tools such such as Figma, HTML, CSS, React, Firebase and GitHub.',
+        title: 'Maze Generator',
+        thumbnail: require("../assets/MazeGenerator.jpg").default,
+        altText: 'Thumbnail of the HTML python-generated form',
+        description: 'This project  creates a maze based on a python  form. In the form, the user can choose the size (width and length), background color and text color. The program will calculate the best path to the final destination, show the visual path solution in an HTML generated page and send the coordinates of the best path to the email entered in the form. ',
         learnMoreLink: 'https://github.com/jvane1/personal-portfolio',
     },
 ];
@@ -54,7 +54,7 @@ const Projects = props => {
         viewAll ? projectsList = ProjectData.map((project) => (
             <ProjectCard key={project.id} className={classes.card}>
                 <h3>{project.title}</h3>
-                <a href={project.learnMoreLink} target="_blank"><img className={classes.thumbnail} src={project.thumbnail} alt={project.altText} /></a>
+                <a href={project.learnMoreLink} target="_blank" className={classes.thumbnailContainer}><img className={classes.thumbnail} src={project.thumbnail} alt={project.altText} /></a>
                 <p className={classes.projectDescription}>{project.description} </p>
                 <div className={classes.learnMoreContainer}><a href={project.learnMoreLink} target="_blank"><Button>Learn More</Button></a></div>
             </ProjectCard>
@@ -76,7 +76,7 @@ const Projects = props => {
             <section className={classes.cardSection}>
                 {projectsList}
             </section>
-            <div className={classes.viewAllButton}><Button onClick={onViewToggle}>{viewAll? 'Show Less':'View All'}</Button></div>
+            <div className={classes.viewAllButton}><Button onClick={onViewToggle}>{viewAll? 'Show Fewer':'View All'}</Button></div>
             <img className={classes.backgroundDetail} src={backgroundDetail} />
             <div className={classes.circle1} />
             <div className={classes.circle2} />
