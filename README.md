@@ -2,7 +2,7 @@
 
 This personal portfolio is being created using technologies such as Figma, GitHub, HTML, CSS, ReactJS and Firebase. 
 
-This project was create via [Create React App](https://github.com/facebook/create-react-app).
+You can see this project hosted in GitHub pages: https://juanvmaya.github.io/personal-portfolio/. This project was created from scratch via [Create React App](https://github.com/facebook/create-react-app).
 
 To run my code, download and navigate into the specific downloaded folder via the cd command in your command prompt or terminal first.
 Then run npm install to install all required dependencies (this will create a /node_modules folder).
@@ -23,7 +23,7 @@ Once it is up and running, you will see the following page (or something similar
 ### `Blog Page`
 ![image](https://user-images.githubusercontent.com/39928097/130020878-8ac4db1d-d510-49e5-a219-868e1d1c309b.png)
 
-### `Footer (Add social madia links)`
+### `Footer (Add social media links)`
 ![image](https://user-images.githubusercontent.com/39928097/130021039-abfbd97f-ce7a-4b33-ac6f-9dbc6a691c58.png)
 
 
