@@ -10,7 +10,7 @@ const ProjectData = [
         title: 'Personal Portfolio',
         thumbnail: require("../assets/PersonalPortfolio.png").default,
         altText: 'Thumbnail of personal portfolio',
-        description: 'This website is a compilation of materials that exemplifies my beliefs, skills, qualifications, education, training and experiences. It provides insight into my personality and work ethic.This is a representation of self-taught all-in-one project. It includes technolgies and tools such such as Figma, HTML, CSS, React, Firebase and GitHub.',
+        description: 'This website is a compilation of materials that exemplifies my beliefs, skills, qualifications, education, training and experiences. It provides insight into my personality and work ethic. This is a representation of the self-taught all-in-one project. It includes technologies and tools such as Figma, HTML, CSS, React, Firebase and GitHub.',
         learnMoreLink: 'https://github.com/jvane1/personal-portfolio',
     },
     {
@@ -35,7 +35,7 @@ const ProjectData = [
         thumbnail: require("../assets/PokerGame.jpeg").default,
         altText: 'Thumbnail of personal portfolio',
         description: 'This project is a version of an automated poker game for 2-5 players. It provides insight into the experience with python programming language. Once run, the programe will prompt for the number of players that will play, simulate the game and list the winners alogn with the best hand. The game does have a list of the possible hands and list the player id winner and the winning hand',
-        learnMoreLink: 'https://github.com/JuanVMaya/PokerGame',
+        learnMoreLink: 'https://github.com/JuanVMaya/PokerGame/blob/master/PokerGame.py',
     },
     {
         id: '5',
@@ -43,7 +43,7 @@ const ProjectData = [
         thumbnail: require("../assets/MazeGenerator.jpg").default,
         altText: 'Thumbnail of the HTML python-generated form',
         description: 'This project  creates a maze based on a python  form. In the form, the user can choose the size (width and length), background color and text color. The program will calculate the best path to the final destination, show the visual path solution in an HTML generated page and send the coordinates of the best path to the email entered in the form. ',
-        learnMoreLink: 'https://github.com/jvane1/personal-portfolio',
+        learnMoreLink: 'https://github.com/JuanVMaya/MazeGenerator/blob/main/maze.py',
     },
 ];
 
