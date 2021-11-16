@@ -8,7 +8,6 @@ const ScrollToTop = (props) => {
                 window.scrollTo(0, 0)
             }
         >
-
             <img
                 src={require("../../assets/ScrollToTopArrow.svg").default}
                 alt="Scroll to top" />

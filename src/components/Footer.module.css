@@ -36,7 +36,7 @@
     max-width: 30%;
     padding: 0 2vh 2vh 2vh;
 }
-.socialIcon:hover{
+.logoContainer:hover{
     opacity: 60%;
 }
 .downloadResume{

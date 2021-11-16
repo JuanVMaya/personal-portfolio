@@ -15,16 +15,16 @@ const Footer = () => {
                 <div className={classes.rightContainer}>
                     <div className={classes.socialLogosContainer} >
                         <div className={classes.logoContainer}>
-                            <SocialIcon url="mailto:juanjovanegas21@gmail.com" bgColor="#c7c8c9" target="_blank" style={{height:35, width:35}} className={classes.socialIcon} />
+                            <SocialIcon url="mailto:juanjovanegas21@gmail.com" bgColor="#c7c8c9" target="_blank" style={{height:35, width:35}} />
                         </div>
                         <div className={classes.logoContainer}>
-                            <SocialIcon url="https://twitter.com/JuanVMaya" bgColor="#c7c8c9" target="_blank" style={{height:35, width:35}} className={classes.socialIcon} />
+                            <SocialIcon url="https://twitter.com/JuanVMaya" bgColor="#c7c8c9" target="_blank" style={{height:35, width:35}}  />
                         </div>
                         <div className={classes.logoContainer}>
-                            <SocialIcon url="https://github.com/juanvmaya" bgColor="#c7c8c9" target="_blank" style={{height:35, width:35}} className={classes.socialIcon} />
+                            <SocialIcon url="https://github.com/juanvmaya" bgColor="#c7c8c9" target="_blank" style={{height:35, width:35}}  />
                         </div>
                         <div className={classes.logoContainer}>
-                            <SocialIcon url="https://www.linkedin.com/in/juan-jose-vanegas-maya/" target="_blank" bgColor="#c7c8c9" style={{height:35, width:35}} className={classes.socialIcon} />
+                            <SocialIcon url="https://www.linkedin.com/in/juan-jose-vanegas-maya/" target="_blank" bgColor="#c7c8c9" style={{height:35, width:35}}  />
                         </div>
                     </div>
                     

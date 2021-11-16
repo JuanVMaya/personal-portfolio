@@ -17,7 +17,7 @@ const App = () => {
   const projectsRef=useRef(null);
   
   const prevScrollY = useRef(0);
-  const [goingUp, setGoingUp] = useState(false);
+  const [goingUp, setGoingUp] = useState(true);
 
   const showContactFormHandler = () => {
     setShowContactForm(true);
