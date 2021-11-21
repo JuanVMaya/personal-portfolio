@@ -1,0 +1,119 @@
+.background {
+    display: flex;
+    min-height: 100vh;
+    }
+    
+    .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+    }
+    
+    .screenBody {
+    display: flex;
+    }
+    
+    .screenBodyItem {
+    flex: 1;
+    padding: 2vh;
+    }
+    
+    .screenBodyItemLeft {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .appTitle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #132C33;
+    font-size: inherit;
+    }
+    
+    .appTitle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -0.75vh;
+    width: 2.5vh;
+    height: 4px;
+    background: #132C33;
+    }
+    
+    .appContact {
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: #132C33;
+    }
+    
+    .appRightGroup {
+    margin-bottom: 1vh;
+    color: #224d58;
+    font-size: 1.2rem;
+    }
+        
+    .appRightGroupButtons {
+    margin-bottom: auto;
+    margin-top: 3vh;
+    text-align: right;
+    }
+    
+    .appCloseButton {
+    background: none;
+    border: none;
+    color: #224d58;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    padding-left: 1vw;
+    font-weight: bold;
+    }
+    .appCloseButton:hover {
+        color: #132C33;
+    }
+    
+    .cancelButton{
+        background-color: #666;
+    }
+    
+    @media screen and (max-width: 520px) {
+    .screenBody {
+        flex-direction: column;
+    }
+    
+    .screenBodyItemLeft {
+        margin-bottom: 1vh;
+    }
+    
+    .appTitle {
+        flex-direction: row;
+    }
+    
+    .appTitle span {
+        margin-right: 0.5vh;
+    }
+    
+    .appTitle:after {
+        display: none;
+    }
+    }
+    
+    @media screen and (max-width: 600px) {
+    .screenBody {
+        padding: 2vh;
+    }
+    
+    .screenBodyItem {
+        padding: 0;
+    }
+    }
+      

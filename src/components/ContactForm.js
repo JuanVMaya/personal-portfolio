@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useRef, Fragment } from "react";
 import Modal from "./UI/Modal";
 import classes from "./ContactForm.module.css";
-import Button from "./UI/Button";
+import emailjs from 'emailjs-com';
+import ContactEmailSent from "./ContactEmailSent";
 
 const ContactForm = (props) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState(false);
-    const submit = () => {
+    const form = useRef();
+
+    const submitFormHandler = (e) => {
+        e.preventDefault();
+
         if (name && email && message) {
-            // TODO - send mail
+            emailjs.sendForm('service_p0y7uws', 'contact_form', form.current, 'user_iJb8qA4UoRwIwPoCnoZVv')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+
             setName('');
             setEmail('');
             setMessage('');
@@ -18,43 +29,41 @@ const ContactForm = (props) => {
         } else {
             alert('Please fill in all fields.');
         }
+        console.log(emailSent);
     }
     return (
-        <Modal onClose={props.onClose}>
-            <div className={classes.screenBody}>
-                <div className={`${classes.screenBodyItem} ${classes.screenBodyItemLeft}`}>
-                    <div className={classes.appTitle}>
-                        <span>CONTACT</span>
-                        <span>ME</span>
+        <Fragment>
+            {emailSent ?
+                <ContactEmailSent onClose={props.onClose} />
+                :
+                <Modal onClose={props.onClose}>
+                    <div className={classes.screenBody}>
+                        <div className={`${classes.screenBodyItem} ${classes.screenBodyItemLeft}`}>
+                            <div className={classes.appTitle}>
+                                <span>CONTACT</span>
+                                <span>ME</span>
+                            </div>
+                            <div className={classes.appContact}>CONTACT INFO : +1 647-568-1890</div>
+                        </div>
+                        <form ref={form} className={classes.screenBodyItem} onSubmit={submitFormHandler}>
+                            <div className={classes.appFormGroup}>
+                                <input className={classes.appFormControl} type="text" placeholder="NAME" value={name} name="from_name" onChange={e => setName(e.target.value)} />
+                            </div>
+                            <div className={classes.appFormGroup}>
+                                <input className={classes.appFormControl} type="email" placeholder="EMAIL" value={email} name="user_email" onChange={e => setEmail(e.target.value)} />
+                            </div>
+                            <div className={`${classes.appFormGroup} ${classes.appFormGroupMessage}`}>
+                                <textarea className={classes.appFormControl} placeholder="MESSAGE" value={message} name="message" onChange={e => setMessage(e.target.value)} />
+                            </div>
+                            <div className={`${classes.appFormGroup} ${classes.appFormGroupButtons}`}>
+                                <button onClick={props.onClose} className={classes.appFormButton}>CANCEL</button>
+                                <button className={classes.appFormButton} type="submit">SEND</button>
+                            </div>
+                        </form>
                     </div>
-                    <div className={classes.appContact}>CONTACT INFO : +1 647-568-1890</div>
-                </div>
-                <div className={classes.screenBodyItem}>
-                    <div class="app-form">
-                        <div className={classes.appFormGroup}>
-                            <input className={classes.appFormControl} type="text" placeholder="NAME" value={name} onChange={e => setName(e.target.value)}/>
-                        </div>
-                        <div className={classes.appFormGroup}>
-                            <input className={classes.appFormControl} type="email" placeholder="EMAIL" value={email} onChange={e => setEmail(e.target.value)}/>
-                        </div>
-                        <div className={`${classes.appFormGroup} ${classes.appFormGroupMessage}`}>
-                            <textarea className={classes.appFormControl} placeholder="MESSAGE" value={message} onChange={e => setMessage(e.target.value)}/>
-                        </div>
-                        <div className={`${classes.appFormGroup} ${classes.appFormGroupButtons}`}>
-                            <button onClick={props.onClose} className={classes.appFormButton}>CANCEL</button>
-                            <button className={classes.appFormButton}>SEND</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* <input className={classes.input} type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-            <input className={classes.input} type="email" placeholder="Email address" value={email} onChange={e => setEmail(e.target.value)} />
-            <textarea placeholder="Your message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-            <button onClick={submit}>Send Message</button>
-            <button onClick={props.onClose}>Close</button>        
-            <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
-             */}
-        </Modal>
-    );
+                </Modal>
+            }
+        </Fragment >
+            );
 };
 export default ContactForm;
