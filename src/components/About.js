@@ -3,17 +3,31 @@ import disciplines from '../assets/Disciplines.svg'
 import backgroundDetail from '../assets/AboutBackground.svg'
 
 const About = (props) => {
-    
+
     return (
         <section className={classes.aboutPage} ref={props.myRef}>
             <h1 className={classes.sectionTitle}>About</h1>
             <div className={classes.description}>
                 <p className={classes.aboutMe}>
-                    Results-oriented college graduate with an Advanced Diploma in Electronics Engineering
-                    Technology (3.9 GPA), working in the Electronics Manufacturing Industry. Aiming to leverage
-                    academic experience, proven knowledge of various development disciplines and modern development
-                    tools to build the future of the internet.
+                    Result-driven and motivated software engineering enthusiast with demonstrated experience in both business and software development.
+                    Quick learner and easy adopter to new technologies and existing projects. Proven record of collaborating in real-world web applications
+                    accountable for $1.7M in annual revenue.
                 </p>
+                <br />
+                <h4>Skills / Technologies</h4>
+                <br />
+                <ul className={classes.skillsColumns}>
+                    <li>JavaScript</li>
+                    <li>ReactJS</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>GitHub</li>
+                    <li>Figma</li>
+                    <li>C</li>
+                    <li>Salesforce</li>
+                    <li>MS Office Suite</li>
+                </ul>
             </div>
             <img className={classes.disciplines} src={disciplines} alt='A website mock-up, a circuit diagram and a mobile app' />
             <img className={classes.backgroundDetail} src={backgroundDetail} alt='A geometric background representing a downhill landscape' />

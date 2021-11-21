@@ -37,3 +37,19 @@
     height: auto;
     z-index: 1;
 }
+.skillsColumns {
+    margin-left: 5vw;
+    color:#132C33;
+    -webkit-column-count: 2;  /* Chrome/Opera, Safari */
+    -moz-column-count: 2; /* Mozilla Firefox */
+    column-count: 2;
+    
+    /* Properties below are optional: */
+    -webkit-column-gap: 50px; /* Chrome/Opera, Safari */
+    -moz-column-gap: 50px; /* Mozilla Firefox */
+    column-gap: 50px;
+    
+    -webkit-column-rule: 1px single grey; /* Chrome/Opera, Safari */
+    -moz-column-rule: 1px single grey; /* Mozilla Firefox */
+    column-rule: 1px single grey;
+}
