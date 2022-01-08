@@ -47,7 +47,7 @@ const App = () => {
       onScrollAbout={aboutScrollHandler}
       onScrollProjects={projectsScrollHandler}
       />
-      <Landing />
+      <Landing onScrollAbout={aboutScrollHandler}/>
       <div ref={aboutRef} ><About  /></div>
       <div ref={projectsRef}><Projects /></div>
       <ScrollToTop scrollUp={enableScrollUp} />

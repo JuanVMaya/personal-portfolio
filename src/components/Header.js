@@ -8,7 +8,7 @@ const Header = (props) => {
             <nav>
                 <a className={classes.navLink} onClick={props.onScrollAbout}>About</a>
                 <a className={classes.navLink} onClick={props.onScrollProjects}>Projects</a>
-                <p className={classes.navLink} title="Comming Soon">Blog</p>
+                {/* <p className={classes.navLink} title="Comming Soon">Blog</p> */}
                 <Button onClick={props.onShowContactForm}>Contact</Button>
             </nav>
         </header>
