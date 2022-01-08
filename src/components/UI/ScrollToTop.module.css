@@ -1,7 +1,3 @@
-
-.hideScrollToTop{
-    opacity: 0;
-}
 .scrollToTop{
     position: fixed;
     cursor: pointer;
@@ -15,6 +11,10 @@
     padding: auto;
     z-index: 5;
     transition: 0.15s ease-out;
+}
+.hideScrollToTop{
+    opacity: 0;
+    cursor: default;
 }
 
 .scrollToTop:hover{

@@ -17,7 +17,7 @@ const App = () => {
   const projectsRef=useRef(null);
   
   const prevScrollY = useRef(0);
-  const [goingUp, setGoingUp] = useState(true);
+  const [enableScrollUp, setEnableScrollUp] = useState(true);
 
   const showContactFormHandler = () => {
     setShowContactForm(true);
@@ -32,17 +32,13 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (prevScrollY.current < currentScrollY && goingUp) {
-        setGoingUp(false);
-      }
-      if (prevScrollY.current > currentScrollY && !goingUp) {
-        setGoingUp(true);
-      }
+      if (currentScrollY>0) setEnableScrollUp(false)
+      else setEnableScrollUp(true);
       prevScrollY.current = currentScrollY;
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [goingUp]);
+  }, [enableScrollUp]);
 
   return (
     <div className="App" >
@@ -54,7 +50,7 @@ const App = () => {
       <Landing />
       <div ref={aboutRef} ><About  /></div>
       <div ref={projectsRef}><Projects /></div>
-      <ScrollToTop scrollUp={goingUp} />
+      <ScrollToTop scrollUp={enableScrollUp} />
       <Footer />
     </div>
   );
