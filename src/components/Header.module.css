@@ -27,3 +27,15 @@ nav{
 .navLink:focus{
     color: #51C4D3;
 }
+
+@media screen and (max-width: 768px){
+    .appHeader{
+        height: 20vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    nav{
+        width: 100%; 
+    }
+}
+    

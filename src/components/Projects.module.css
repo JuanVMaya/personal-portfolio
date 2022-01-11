@@ -85,3 +85,17 @@
     left: 5%;
 }
 
+@media screen and (max-width: 768px){
+    .projectsPage{
+        padding: 5vh 5vh ;
+        width: 100%;
+        height: auto;
+    }
+    .cardSection{
+        flex-direction: column;
+    }
+    .viewAllButton{
+        position: relative;
+    }
+    
+}

@@ -1,35 +1,41 @@
-.aboutPage{
+.aboutPage {
     position: relative;
-    display:flex;
-    color:#126E82;
+    display: flex;
+    color: #126E82;
     background-color: #D8E3E7;
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding: 0 10%;
-    overflow: hidden;    
+    overflow: hidden;
     justify-content: space-between;
     align-items: center;
 }
-.sectionTitle{
+
+.sectionTitle {
     position: absolute;
-    top:2vh;
+    top: 2vh;
 }
-.description{
+
+.description {
     height: 100vh;
     max-width: 40%;
+    padding-bottom: 15vh;
     z-index: 2;
 }
-.aboutMe{
+
+.aboutMe {
     padding: 12vh 0 0;
     text-align: justify;
-    color:#132C33;
+    color: #132C33;
 }
-.disciplines{
+
+.disciplines {
     max-width: 50%;
     height: auto;
     z-index: 2;
 }
-.backgroundDetail{    
+
+.backgroundDetail {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -37,19 +43,46 @@
     height: auto;
     z-index: 1;
 }
+
 .skillsColumns {
     margin-left: 5vw;
-    color:#132C33;
-    -webkit-column-count: 2;  /* Chrome/Opera, Safari */
-    -moz-column-count: 2; /* Mozilla Firefox */
+    color: #132C33;
+    -webkit-column-count: 2;
+    /* Chrome/Opera, Safari */
+    -moz-column-count: 2;
+    /* Mozilla Firefox */
     column-count: 2;
-    
+
     /* Properties below are optional: */
-    -webkit-column-gap: 50px; /* Chrome/Opera, Safari */
-    -moz-column-gap: 50px; /* Mozilla Firefox */
+    -webkit-column-gap: 50px;
+    /* Chrome/Opera, Safari */
+    -moz-column-gap: 50px;
+    /* Mozilla Firefox */
     column-gap: 50px;
-    
-    -webkit-column-rule: 1px single grey; /* Chrome/Opera, Safari */
-    -moz-column-rule: 1px single grey; /* Mozilla Firefox */
+
+    -webkit-column-rule: 1px single grey;
+    /* Chrome/Opera, Safari */
+    -moz-column-rule: 1px single grey;
+    /* Mozilla Firefox */
     column-rule: 1px single grey;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutPage {
+        width: 100%;
+        height: auto;
+        flex-direction:column;
+        align-items: center;
+        padding: 0 0 10vh 0;
+    }
+    .description{
+        max-width: 100%;
+        height: auto;
+        padding: 2.5vh 10vw;
+    }
+    .aboutMe {
+        padding: 10vh 0 0 0;
+        text-align: justify;
+        color: #132C33;
+    }
 }

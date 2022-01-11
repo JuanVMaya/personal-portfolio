@@ -1,5 +1,4 @@
 .footerContainer{
-    position: relative;
     display:flex;
     flex-direction: column;
     color:#D8E3E7;
@@ -15,16 +14,17 @@
     justify-content: space-between;
     padding: 1vh 0 1vh 0;
 }
-.leftContainer{
+.rightContainer{
     align-self: center;
     max-width: 50%;
     justify-items: center;
 }
-.rightContainer{
+.leftContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 40%;
+    align-self: center;
 }
 .socialLogosContainer{
     display: flex;
@@ -46,3 +46,19 @@
     align-self: center;
     font-size: 0.8rem;
 }
+@media screen and (max-width: 768px){
+    .footerContainer{
+        padding: 0;
+        width: 100%;
+        height: auto;
+    }
+    .footerContent{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .leftContainer,
+    .rightContainer{
+        padding-bottom: 2vh;
+    }
+}
+    
