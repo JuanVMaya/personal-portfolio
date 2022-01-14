@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                     </div>
                     
-                    <a href={resume} target="_blank" rel="noopener noreferrer" style ={{textDecoration:"None"}}><Button>Download Resume</Button></a>
+                    <a href={resume} target="_blank" rel="noopener noreferrer" style ={{textDecoration:"None"}}><Button>Check Resume</Button></a>
                 </div>
                 <div className={classes.rightContainer}>
                     <p>Juan Jose Vanegas Maya</p>
