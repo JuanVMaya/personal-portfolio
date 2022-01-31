@@ -15,10 +15,10 @@ const ContactEmailSent = (props) => {
                 </div>
                 <div className={classes.screenBodyItem} >
                     <div className={classes.appRightGroup}>
-                        <span>You message was sent succesfully</span>
+                        <span>Your message was sent succesfully!</span>
                         <br />
                         <br />
-                        <span>I will be in touch with you soon!</span>
+                        <span>I will be in touch with you soon</span>
                     </div>
                     <div className={classes.appRightGroupButtons}>
                         <button onClick={props.onClose} className={classes.appCloseButton}>CLOSE</button>
