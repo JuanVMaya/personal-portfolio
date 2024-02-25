@@ -4,14 +4,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
+body {
   font-family: "Work Sans", sans-serif;
-} */
+}
+
 canvas {
   height: 640px !important;
 }
+
+@keyframes myAnimation {
+  from {
+    transform: translateZ(0) translateY(0) rotateX(0) rotateY(0);
+  }
+  to {
+    transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+  }
+}
+
 @layer utilities {
+  .max-container {
+    @apply max-w-6xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-96px)];
+  }
+
+  .head-text {
+    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+  }
+
+  .subhead-text {
+    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+  }
+
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#377CFB] bg-clip-text text-transparent;
+  }
+
+  .skills-container {
+    @apply transition ease-in-out delay-100 bg-slate-200 bg-opacity-50 hover:-translate-y-1 hover:scale-110 hover:bg-slate-400 duration-300;
   }
 }

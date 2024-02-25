@@ -7,7 +7,7 @@ import Loader from "./Loader";
 
 const HomeInfo = () => {
   return (
-    <div className="hero min-h-screen">
+    <div className="hero min-h-[calc(100vh-96px)]">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="max-w-sm rounded-lg shadow-2xl">
           <Canvas
