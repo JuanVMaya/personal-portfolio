@@ -4,16 +4,20 @@ import React, { Suspense } from "react";
 import Earth from "../../public/Earth";
 import { Link } from "react-router-dom";
 import { Environment, OrbitControls } from "@react-three/drei";
+import Loader from "./Loader";
 
 const HomeInfo = () => {
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="max-w-sm rounded-lg shadow-2xl">
-          <Canvas camera={{ position: [0, 0, 4] }}>
+          <Canvas
+            camera={{ position: [0, 0, 4] }}
+            className={` flex justify-center items-center bg-transparent hover:cursor-grab`}
+          >
             <ambientLight intensity={1.5} />
             <OrbitControls enableZoom={true} />
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loader />}>
               <Earth />
             </Suspense>
             <Environment preset="sunset" />
