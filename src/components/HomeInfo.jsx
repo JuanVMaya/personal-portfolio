@@ -10,7 +10,7 @@ const HomeInfo = () => {
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="max-w-sm rounded-lg shadow-2xl">
-          <Canvas camera={{ position: [0, 0, 3] }}>
+          <Canvas camera={{ position: [0, 0, 4] }}>
             <ambientLight intensity={1.5} />
             <OrbitControls enableZoom={true} />
             <Suspense fallback={null}>
