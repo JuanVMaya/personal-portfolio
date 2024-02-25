@@ -9,8 +9,6 @@ Title: Earth
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
-import { Marker } from "../src/components";
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Earth = (props) => {
   const { nodes, materials } = useGLTF("/earth.gltf");
@@ -25,23 +23,7 @@ const Earth = (props) => {
         geometry={nodes.Object_4.geometry}
         material={materials["Scene_-_Root"]}
         scale={1.5}
-      >
-        <group position={[0.0, -0.4, 1]} scale={0.5}>
-          <Marker rotation={[0, Math.PI / 2, Math.PI / 2]}>
-            <div
-              style={{
-                position: "absolute",
-                fontSize: 5,
-                letterSpacing: -0.2,
-                left: 17.5,
-              }}
-            >
-              Origin
-            </div>
-            <FaMapMarkerAlt style={{ color: "#2E6BDA" }} />
-          </Marker>
-        </group>
-      </mesh>
+      ></mesh>
     </group>
   );
 };
