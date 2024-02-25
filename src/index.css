@@ -39,6 +39,6 @@ canvas {
   }
 
   .skills-container {
-    @apply transition ease-in-out delay-100 bg-slate-200 bg-opacity-50 hover:-translate-y-1 hover:scale-110 hover:bg-slate-400 duration-300;
+    @apply transition ease-in-out delay-100 bg-slate-200 bg-opacity-50 hover:-translate-y-1 hover:scale-110 hover:bg-slate-300 duration-300;
   }
 }

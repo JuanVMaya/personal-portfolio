@@ -22,7 +22,7 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Developer based in Ottawa 🍁, specializing in full-stack web
+          Software Developer based in Canada 🍁, specializing in full-stack web
           development through hands-on learning and building applications.
         </p>
       </div>
