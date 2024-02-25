@@ -1,8 +1,11 @@
-# React + Vite
+# Welcome to My Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm a developer based in Canada 🍁 This personal portfolio is constantly developed. This time, it was made using technologies such as React, Tailwind, Javascript, Git, Figma .
 
-Currently, two official plugins are available:
+## Technologies used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+    <img src="https://skillicons.dev/icons?i=js,react,nodejs,tailwind,vscode,git,figma&perline=7" />
+</p>
+
+You can see this project hosted in GitHub pages: https://juanvmaya.github.io/personal-portfolio/. This project was created from scratch via (https://github.com/facebook/create-react-app).
