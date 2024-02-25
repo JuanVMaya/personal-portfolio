@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { About, Contact, Home, Projects } from "./pages";
 
-function App() {
+const App = () => {
   return (
-    <main className="bg-base-100 max-w-screen-xl m-auto">
+    <div className="bg-base-100 max-w-screen-xl m-auto">
       <BrowserRouter future={{ v7_startTransition: true }}>
         <Navbar />
         <Routes>
@@ -24,8 +24,8 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-    </main>
+    </div>
   );
-}
+};
 
 export default App;

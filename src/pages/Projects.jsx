@@ -1,7 +1,7 @@
 import React from "react";
 
 const Projects = () => {
-  return <div>Projects</div>;
+  return <main className="px-8 py-4">Projects</main>;
 };
 
 export default Projects;
