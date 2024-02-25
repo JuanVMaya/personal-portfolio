@@ -1,18 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div className="bg-blue-500">
-        <p>Click on the Vite and React logos to learn more</p>
-      </div>
-      <button className="btn">This is my button</button>
-    </>
+    <main className="bg-base-100 max-w-screen-xl m-auto">
+      <BrowserRouter future={{ v7_startTransition: true }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
 
