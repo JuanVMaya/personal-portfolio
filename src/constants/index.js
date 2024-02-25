@@ -1,10 +1,8 @@
 import { bittele, carrier, seneca } from "../assets/images";
 import {
-  car,
   contact,
   css,
   daisyui,
-  estate,
   express,
   git,
   github,
@@ -15,14 +13,10 @@ import {
   mongodb,
   nextjs,
   nodejs,
-  pricewise,
   react,
   redux,
   sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
   typescript,
 } from "../assets/icons";
 
@@ -106,6 +100,24 @@ export const skills = [
     imageUrl: daisyui,
     name: "Daisy UI",
     type: "Frontend",
+  },
+];
+
+export const socialLinks = [
+  {
+    name: "Contact",
+    iconUrl: contact,
+    link: "/contact",
+  },
+  {
+    name: "GitHub",
+    iconUrl: github,
+    link: "https://github.com/JuanVMaya",
+  },
+  {
+    name: "LinkedIn",
+    iconUrl: linkedin,
+    link: "https://www.linkedin.com/in/juanvmaya/",
   },
 ];
 
