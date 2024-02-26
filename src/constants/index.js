@@ -3,22 +3,91 @@ import {
   contact,
   css,
   daisyui,
+  etsy,
   express,
   git,
   github,
   go,
+  heart,
+  house,
   html,
   javascript,
   linkedin,
   mongodb,
+  mood,
   nextjs,
   nodejs,
   react,
   redux,
   sass,
+  sensor,
+  sponsorarc,
   tailwindcss,
   typescript,
+  workflow,
 } from "../assets/icons";
+
+export const projects = [
+  {
+    iconUrl: sponsorarc,
+    theme: "icon-card-back-black",
+    name: "SponsorArc",
+    description:
+      "Web application that lets content creators connect with sponsor brands. Brands will have the ability to showcase their products to the correct audience though creators.  Creators can marker their experience to obtains brand deals/pratnerships.",
+    link: "https://github.com/JuanVMaya/sponsorarc",
+  },
+  {
+    iconUrl: etsy,
+    theme: "icon-card-back-orange",
+    name: "Etsy Shop - The One TCG",
+    description:
+      "Live Etsy shop specializes in 3D printed items, offering a range of custom-designed product for TCG (Trading Card Games) items, that blend modern engineering desing technology with personal touch. Basically, overengineered  accesories for card gamers.",
+    link: "https://theonetcg.etsy.com",
+    hasLiveLink: true,
+  },
+  {
+    iconUrl: house,
+    theme: "icon-card-back-blue",
+    name: "Conmetodo S.A.S.",
+    description:
+      "This is a live website designed using Svelte and Tailwind for a Colombian company dedicated to appraisals of real estate, machinery, infrastructure and company assets.",
+    link: "https://conmetodo.netlify.app/",
+    hasLiveLink: true,
+  },
+  {
+    iconUrl: mood,
+    theme: "icon-card-back-green",
+    name: "Google Moods",
+    description:
+      "Google Moods was a front-end application inspired by the 'How might we' increase access to mental health resources so that people can feel supported and improve their wellbeing? Hackathon - BrainStation x Google",
+    link: "https://github.com/JuanVMaya/google-moods",
+  },
+  {
+    iconUrl: workflow,
+    theme: "icon-card-back-yellow",
+    name: "WorkFlow App",
+    description:
+      "Web application that lets you manage projects every step of the way from initiation and closing. You can breakdown your project into tasks with descriptions and assign them to different stages such as 'Not complete', 'Planning', 'Executing' and 'Completed'. This was was done in a partnership in under 24 hours.",
+    link: "https://github.com/JuanVMaya/workflow-app",
+  },
+  {
+    iconUrl: heart,
+    theme: "icon-card-back-pink",
+    name: "The One Love",
+    description:
+      "This is a web app made in React + Vite SPA with Javascript. This was made specifically for my fiance for 2024 valentine's day. The web app is visually optimized for her phone and was meant to highlight a few relationship goals through a series of fun challenges and questions.",
+    link: "https://github.com/JuanVMaya/TheOneLove",
+  },
+  {
+    iconUrl: sensor,
+    theme: "icon-card-back-orange",
+    name: "Robotic Autonomous Driver",
+    description:
+      "Collaborated with Cyberwrok within Seneca Innovation and the School of Electronics & Mechanical Engineering Technology, to develop an electromechanical design for the autonomous drive module compatible with multiple machines.",
+    link: "https://www.senecapolytechnic.ca/news-and-events/seneca-news/robotic-floor-cleaner-soon-to-drive-itself-at-seneca.html",
+    hasLiveLink: true,
+  },
+];
 
 export const skills = [
   {

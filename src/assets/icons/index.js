@@ -1,59 +1,55 @@
+import contact from "./contact.svg";
 import css from "./css.svg";
+import arrow from "./arrow.svg";
+import etsy from "./etsy.svg";
 import express from "./express.svg";
+import daisyui from "./daisyui.svg";
 import git from "./git.svg";
 import github from "./github.svg";
 import go from "./go.svg";
+import heart from "./heart.svg";
+import house from "./house.svg";
 import html from "./html.svg";
 import javascript from "./javascript.svg";
 import mongodb from "./mongodb.svg";
-import daisyui from "./daisyui.svg";
+import mood from "./mood.svg";
 import nextjs from "./nextjs.svg";
 import nodejs from "./nodejs.svg";
 import react from "./react.svg";
 import redux from "./redux.svg";
 import sass from "./sass.svg";
+import sensor from "./sensor.svg";
 import tailwindcss from "./tailwindcss.svg";
 import typescript from "./typescript.svg";
 import linkedin from "./linkedin.svg";
-import twitter from "./twitter.svg";
-import car from "./car.svg";
-import estate from "./estate.svg";
-import pricewise from "./pricewise.svg";
-import snapgram from "./snapgram.svg";
-import summiz from "./summiz.svg";
-import threads from "./threads.svg";
-import arrow from "./arrow.svg";
-import contact from "./contact.svg";
-import soundon from "./soundon.png";
-import soundoff from "./soundoff.png";
+import sponsorarc from "./sponsorarc.svg";
+import workflow from "./workflow.svg";
 
 export {
   css,
+  etsy,
   express,
   daisyui,
   git,
   github,
   go,
+  heart,
+  house,
   html,
   javascript,
   mongodb,
+  mood,
   nextjs,
   nodejs,
   react,
   redux,
   sass,
+  sensor,
   tailwindcss,
   typescript,
   linkedin,
-  twitter,
-  car,
-  estate,
-  pricewise,
-  snapgram,
-  summiz,
-  threads,
+  sponsorarc,
+  workflow,
   arrow,
   contact,
-  soundon,
-  soundoff,
 };
