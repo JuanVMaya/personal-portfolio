@@ -1,20 +1,47 @@
+const icons = {
+  danger: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="stroke-current shrink-0 h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  ),
+  success: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="stroke-current shrink-0 h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  ),
+};
+
 const Alert = ({ type, text }) => {
   return (
-    <div className="absolute top-10 left-0 right-0 flex justify-center items-center">
+    <div className="absolute top-17 left-0 right-0 flex justify-center items-center">
       <div
-        className={`p-2 ${
-          type === "danger" ? "bg-error" : "bg-success"
-        } items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex`}
         role="alert"
+        className={`alert ${
+          type === "danger" ? "alert-error" : "alert-success"
+        }`}
       >
-        <p
-          className={`flex rounded-full ${
-            type === "danger" ? "bg-error" : "bg-success"
-          } uppercase px-2 py-1 text-xs font-semibold mr-3`}
-        >
-          {type === "danger" ? "Failed" : "Success"}
-        </p>
-        <p className="mr-2 text-left">{text}</p>
+        {icons[type]}
+        <span>{text}</span>
       </div>
     </div>
   );
