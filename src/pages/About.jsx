@@ -32,11 +32,8 @@ const About = () => {
 
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="lg:tooltip" data-tip={skill.name}>
-              <div
-                className="w-24 h-24 mask mask-squircle skills-container"
-                key={skill.name}
-              >
+            <div className="lg:tooltip" data-tip={skill.name} key={skill.name}>
+              <div className="w-24 h-24 mask mask-squircle skills-container">
                 <div className="h-full w-full mask mask-hexagon p-5 flex justify-center glass ">
                   <img
                     src={skill.imageUrl}
