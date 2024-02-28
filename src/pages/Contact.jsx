@@ -125,7 +125,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn btn-secondary"
+            className="btn bg-gradient-to-r from-primary to-secondary text-slate-50"
           >
             {loading ? "Sending..." : "Submit"}
           </button>

@@ -9,21 +9,18 @@ Title: Earth
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
+import { Marker } from "../src/components";
 
 const Earth = (props) => {
   const { nodes, materials } = useGLTF("/earth.gltf");
   return (
-    <group
-      rotation={[0, -0.4, 0]}
-      position={[0, 0, 0]}
-      {...props}
-      dispose={null}
-    >
+    <group position={[0, 0, 0]} rotation={[0, 0, 0]} {...props} dispose={null}>
       <mesh
         geometry={nodes.Object_4.geometry}
         material={materials["Scene_-_Root"]}
-        scale={1.5}
+        scale={1}
       ></mesh>
+      <Marker color="#406AFF" />
     </group>
   );
 };

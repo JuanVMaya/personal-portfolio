@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import Earth from "../../public/Earth";
 import { Link } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import Loader from "./Loader";
 
 const HomeInfo = () => {
@@ -11,13 +11,22 @@ const HomeInfo = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="max-w-sm rounded-lg shadow-2xl">
           <Canvas
-            camera={{ position: [0, 3, 5], fov: 50 }}
+            camera={{ position: [0, 3, 3], fov: 50, rotation: [1, 1, 0] }}
             className={` flex justify-center items-center bg-transparent hover:cursor-grab`}
           >
-            <ambientLight intensity={1.5} />
+            <ambientLight intensity={0.5} />
             <OrbitControls enableZoom={true} />
             <Suspense fallback={<Loader />}>
               <Earth />
+              <ContactShadows
+                frames={1}
+                scale={5}
+                position={[0, -1.0, 0]}
+                far={1}
+                blur={5}
+                opacity={0.5}
+                color="#204080"
+              />
             </Suspense>
             <Environment preset="sunset" />
           </Canvas>

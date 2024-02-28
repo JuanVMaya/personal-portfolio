@@ -1,39 +1,37 @@
 import { useRef, useState } from "react";
 import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
-import { Html } from "@react-three/drei";
+import { Cone } from "@react-three/drei";
 
-const Marker = ({ children, ...props }) => {
+const Marker = ({ children, color, ...props }) => {
   const ref = useRef();
-  const [isOccluded, setOccluded] = useState();
-  const [isInRange, setInRange] = useState();
-  const isVisible = isInRange && !isOccluded;
-  // Test distance
+  const [isInRange, setInRange] = useState(true);
+  const isVisible = isInRange;
+
   const vec = new Vector3();
   useFrame((state) => {
-    const range =
-      state.camera.position.distanceTo(ref.current.getWorldPosition(vec)) <= 10;
+    const distance = state.camera.position.distanceTo(
+      ref.current.getWorldPosition(vec)
+    );
+    // Distance where the marker dissapears
+    const range = distance <= 6;
     if (range !== isInRange) setInRange(range);
   });
+
   return (
-    <group ref={ref}>
-      <Html
-        // 3D-transform contents
-        transform
-        // Hide contents "behind" other meshes
-        occlude
-        // Tells us when contents are occluded (or not)
-        onOcclude={setOccluded}
-        // We just interpolate the visible state into css opacity and transforms
-        style={{
-          transition: "all 0.2s",
-          opacity: isVisible ? 1 : 0,
-          transform: `scale(${isVisible ? 1 : 0.25})`,
-        }}
-        {...props}
+    <group ref={ref} {...props}>
+      <Cone
+        position={[0.31, 0.05, 1.01]}
+        args={[0.1, 0.3]}
+        rotation={[Math.PI / 2, 0, Math.PI * 0.9]}
+        scale={isVisible ? 0.5 : 0.15}
       >
-        {children}
-      </Html>
+        <meshStandardMaterial
+          color={color}
+          opacity={isVisible ? 1 : 0}
+          transparent={true} // Ensure transparency is enabled for opacity to work
+        />
+      </Cone>
     </group>
   );
 };
