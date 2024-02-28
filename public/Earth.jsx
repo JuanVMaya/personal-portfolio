@@ -8,7 +8,7 @@ Title: Earth
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, Html } from "@react-three/drei";
 import { Marker } from "../src/components";
 
 const Earth = (props) => {
@@ -20,7 +20,23 @@ const Earth = (props) => {
         material={materials["Scene_-_Root"]}
         scale={1}
       ></mesh>
-      <Marker color="#406AFF" />
+      <Marker color="#406AFF" text="Colombia" />
+      <Html
+        style={{
+          display: "flex",
+          justifyContent: "end",
+          alignItems: "flex-end",
+          flexDirection: "column",
+          padding: "1rem",
+          gap: "1rem",
+        }}
+        fullscreen
+      >
+        <button className="btn font-semibold text-secondary m-4">
+          Where in Canada?
+        </button>
+        <button className="btn font-semibold text-secondary m-4">Origin</button>
+      </Html>
     </group>
   );
 };

@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
-import { Cone } from "@react-three/drei";
+import { Cone, Html } from "@react-three/drei";
 
-const Marker = ({ children, color, ...props }) => {
+const Marker = ({ children, color, text, ...props }) => {
   const ref = useRef();
   const [isInRange, setInRange] = useState(true);
   const isVisible = isInRange;
@@ -31,6 +31,13 @@ const Marker = ({ children, color, ...props }) => {
           opacity={isVisible ? 1 : 0}
           transparent={true} // Ensure transparency is enabled for opacity to work
         />
+        {text?.length && (
+          <Html>
+            <p className="text-secondary absolute font-semibold left-3">
+              {text}
+            </p>
+          </Html>
+        )}
       </Cone>
     </group>
   );
