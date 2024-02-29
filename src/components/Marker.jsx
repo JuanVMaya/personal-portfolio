@@ -12,10 +12,11 @@ const Marker = ({ children, color, text, ...props }) => {
     (state) => state.colombiaMarkerActive
   );
   const isVisible = isInRange;
-  const initialPosZ = 1.01;
+  const initialPosition = new Vector3(0.31, 0.05, 1.01);
   const [bounceTime, setBounceTime] = useState(0);
-
+  const amplitude = 0.1;
   const vec = new Vector3();
+
   useFrame((state, delta) => {
     const distance = state.camera.position.distanceTo(
       ref.current.getWorldPosition(vec)
@@ -25,19 +26,22 @@ const Marker = ({ children, color, text, ...props }) => {
     if (range !== isInRange) setInRange(range);
     if (colombiaMarkerActive) {
       setBounceTime(bounceTime + delta);
-      const bounceHeight = Math.abs(Math.sin(bounceTime * 3)) * 0.1;
-      coneRef.current.position.z = initialPosZ + bounceHeight;
+      // Oscillation from 1.058 to 1.158, so the midpoint is 1.108, and the range is 0.1
+      const oscillation = Math.abs(Math.sin(bounceTime * 3)) * amplitude; // Oscillation calculation
+      const direction = initialPosition.clone(); // Direction from origin to initial position, normalized
+      const newPosition = initialPosition.multiplyScalar(1.058 + oscillation); // New position calculation
+      coneRef.current.position.copy(newPosition);
     } else {
       // Reset position when not active
       setBounceTime(0);
-      coneRef.current.position.z = initialPosZ;
+      coneRef.current.position.copy(initialPosition);
     }
   });
 
   return (
     <group ref={ref} {...props}>
       <Cone
-        position={[0.31, 0.05, initialPosZ]}
+        position={[initialPosition.x, initialPosition.y, initialPosition.z]}
         args={[0.1, 0.3]}
         rotation={[Math.PI / 2, 0, Math.PI * 0.9]}
         scale={isVisible ? 0.5 : 0.15}
