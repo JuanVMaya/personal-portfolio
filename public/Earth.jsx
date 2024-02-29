@@ -10,9 +10,12 @@ Title: Earth
 import React from "react";
 import { useGLTF, Html } from "@react-three/drei";
 import { Marker } from "../src/components";
+import useMarkerStore from "../src/stores/marker";
 
 const Earth = (props) => {
   const { nodes, materials } = useGLTF("/earth.gltf");
+  const activateColombia = useMarkerStore((state) => state.activateColombia);
+
   return (
     <group position={[0, 0, 0]} rotation={[0, 0, 0]} {...props} dispose={null}>
       <mesh
@@ -35,7 +38,12 @@ const Earth = (props) => {
         <button className="btn font-semibold text-secondary m-4">
           Where in Canada?
         </button>
-        <button className="btn font-semibold text-secondary m-4">Origin</button>
+        <button
+          className="btn font-semibold text-secondary m-4"
+          onClick={activateColombia}
+        >
+          Origin
+        </button>
       </Html>
     </group>
   );
