@@ -3,7 +3,6 @@ import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
 import { Cone, Html } from "@react-three/drei";
 import useMarkerStore from "../stores/marker";
-import { useShallow } from "zustand/react/shallow";
 
 const Marker = ({ children, color, text, ...props }) => {
   const ref = useRef();
@@ -13,7 +12,7 @@ const Marker = ({ children, color, text, ...props }) => {
     (state) => state.colombiaMarkerActive
   );
   const isVisible = isInRange;
-  const initialPosY = 1.01;
+  const initialPosZ = 1.01;
   const [bounceTime, setBounceTime] = useState(0);
 
   const vec = new Vector3();
@@ -27,21 +26,18 @@ const Marker = ({ children, color, text, ...props }) => {
     if (colombiaMarkerActive) {
       setBounceTime(bounceTime + delta);
       const bounceHeight = Math.abs(Math.sin(bounceTime * 3)) * 0.1;
-      coneRef.current.position.z = initialPosY + bounceHeight;
+      coneRef.current.position.z = initialPosZ + bounceHeight;
     } else {
       // Reset position when not active
       setBounceTime(0);
-      coneRef.current.position.z = initialPosY;
+      coneRef.current.position.z = initialPosZ;
     }
   });
 
-  useEffect(() => {
-    console.log("colombiaMarkerActive", colombiaMarkerActive);
-  }, [colombiaMarkerActive]);
   return (
     <group ref={ref} {...props}>
       <Cone
-        position={[0.31, 0.05, initialPosY]}
+        position={[0.31, 0.05, initialPosZ]}
         args={[0.1, 0.3]}
         rotation={[Math.PI / 2, 0, Math.PI * 0.9]}
         scale={isVisible ? 0.5 : 0.15}
