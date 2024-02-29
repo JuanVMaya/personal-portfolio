@@ -1,6 +1,6 @@
 # Welcome to My Personal Portfolio
 
-I'm a developer based in Canada 🍁 This personal portfolio is constantly developed. This time, it was made using technologies such as React, Tailwind, Javascript, Git, Figma .
+I'm a developer based in Canada 🍁 This personal portfolio is constantly developed. This time, it was made using technologies such as React, Tailwind, Javascript, Git, and React Three Fiber (Three.js).
 
 ## Technologies used
 
