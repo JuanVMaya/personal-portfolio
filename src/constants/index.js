@@ -23,6 +23,7 @@ import {
   sensor,
   sponsorarc,
   tailwindcss,
+  threejs,
   typescript,
   workflow,
 } from "../assets/icons";
@@ -148,6 +149,11 @@ export const skills = [
   {
     imageUrl: react,
     name: "React",
+    type: "Frontend",
+  },
+  {
+    imageUrl: threejs,
+    name: "ThreeJS",
     type: "Frontend",
   },
   {

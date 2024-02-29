@@ -20,6 +20,7 @@ import redux from "./redux.svg";
 import sass from "./sass.svg";
 import sensor from "./sensor.svg";
 import tailwindcss from "./tailwindcss.svg";
+import threejs from "./threejs.svg";
 import typescript from "./typescript.svg";
 import linkedin from "./linkedin.svg";
 import sponsorarc from "./sponsorarc.svg";
@@ -46,6 +47,7 @@ export {
   sass,
   sensor,
   tailwindcss,
+  threejs,
   typescript,
   linkedin,
   sponsorarc,
