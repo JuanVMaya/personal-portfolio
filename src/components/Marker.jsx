@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
+
 import { Cone, Html } from "@react-three/drei";
 import useMarkerStore from "../stores/marker";
+import { markers } from "../constants";
 
 const Marker = ({ children, color, text, ...props }) => {
   const ref = useRef();
@@ -12,7 +14,7 @@ const Marker = ({ children, color, text, ...props }) => {
     (state) => state.colombiaMarkerActive
   );
   const isVisible = isInRange;
-  const initialPosition = new Vector3(0.31, 0.05, 1.01);
+  const initialPosition = new Vector3(...markers[text].position);
   const [bounceTime, setBounceTime] = useState(0);
   const amplitude = 0.1;
   const vec = new Vector3();
@@ -43,7 +45,7 @@ const Marker = ({ children, color, text, ...props }) => {
       <Cone
         position={[initialPosition.x, initialPosition.y, initialPosition.z]}
         args={[0.1, 0.3]}
-        rotation={[Math.PI / 2, 0, Math.PI * 0.9]}
+        rotation={markers[text].rotation}
         scale={isVisible ? 0.5 : 0.15}
         ref={coneRef}
       >
@@ -55,7 +57,7 @@ const Marker = ({ children, color, text, ...props }) => {
         {text?.length && colombiaMarkerActive && (
           <Html>
             <p className="text-secondary absolute font-semibold left-3">
-              {text}
+              {markers[text].name}
             </p>
           </Html>
         )}

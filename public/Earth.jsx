@@ -11,6 +11,7 @@ import React from "react";
 import { useGLTF, Html } from "@react-three/drei";
 import { Marker } from "../src/components";
 import useMarkerStore from "../src/stores/marker";
+import * as THREE from "three";
 
 const Earth = (props) => {
   const { nodes, materials } = useGLTF("/earth.gltf");
@@ -23,7 +24,10 @@ const Earth = (props) => {
         material={materials["Scene_-_Root"]}
         scale={1}
       ></mesh>
-      <Marker color="#406AFF" text="Colombia" />
+      <Marker color="#406AFF" text="colombia" />
+      <Marker color="red" text="canada" />
+      <axesHelper args={[5]} />
+
       <Html
         style={{
           display: "flex",
