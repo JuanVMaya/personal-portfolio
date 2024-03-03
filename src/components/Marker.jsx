@@ -20,7 +20,7 @@ const Marker = ({ children, color, text, activeMarker, ...props }) => {
       ref.current.getWorldPosition(vec)
     );
     // Distance where the marker dissapears
-    const range = distance <= 6;
+    const range = distance <= 5;
     if (range !== isInRange) setInRange(range);
 
     if (activeMarker) {
@@ -55,11 +55,11 @@ const Marker = ({ children, color, text, activeMarker, ...props }) => {
         />
         {text?.length && activeMarker && (
           <Html>
-            <p
-              className={`absolute font-semibold left-3 text-${markers[text].textColor}`}
-            >
-              {markers[text].name}
-            </p>
+            <div className="bg-slate-200 left-3 absolute p-1 rounded-md">
+              <p className={` font-semibold  text-${markers[text].textColor}`}>
+                {markers[text].name}
+              </p>
+            </div>
           </Html>
         )}
       </Cone>
