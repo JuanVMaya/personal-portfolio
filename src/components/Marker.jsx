@@ -12,7 +12,7 @@ const Marker = ({ children, color, text, activeMarker, ...props }) => {
   const isVisible = isInRange;
   const initialPosition = new Vector3(...markers[text].position);
   const [bounceTime, setBounceTime] = useState(0);
-  const amplitude = 0.1;
+  const amplitude = 0.05;
   const vec = new Vector3();
 
   useFrame((state, delta) => {
@@ -22,11 +22,15 @@ const Marker = ({ children, color, text, activeMarker, ...props }) => {
     // Distance where the marker dissapears
     const range = distance <= 6;
     if (range !== isInRange) setInRange(range);
+
     if (activeMarker) {
       setBounceTime(bounceTime + delta);
-      // Oscillation from 1.058 to 1.158, so the midpoint is 1.108, and the range is 0.1
-      const oscillation = Math.abs(Math.sin(bounceTime * 3)) * amplitude; // Oscillation calculation
-      const newPosition = initialPosition.multiplyScalar(1.058 + oscillation); // New position calculation
+      // Oscillation starting from the half of the scalar distance to the origin
+      // Oscillation calculation, also add PI/2 to move the starting positon to -90*
+      const oscillation = Math.sin(bounceTime * 3 - Math.PI / 2) * amplitude;
+      const newPosition = initialPosition.multiplyScalar(
+        markers[text].scalarDistance + oscillation
+      ); // New position calculation
       coneRef.current.position.copy(newPosition);
     } else {
       // Reset position when not active

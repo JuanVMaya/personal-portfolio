@@ -75,12 +75,14 @@ export const markers = {
     rotation: [Math.PI / 3, 0, Math.PI * 0.9],
     name: "Ontario",
     textColor: "primary",
+    scalarDistance: 1.07,
   },
   colombia: {
     position: [0.31, 0.05, 1.01],
     rotation: [Math.PI / 2, 0, Math.PI * 0.9],
     name: "Colombia",
     textColor: "secondary",
+    scalarDistance: 1.057,
   },
 };
 
