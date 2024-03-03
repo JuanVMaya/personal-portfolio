@@ -11,11 +11,17 @@ import React from "react";
 import { useGLTF, Html } from "@react-three/drei";
 import { Marker } from "../src/components";
 import useMarkerStore from "../src/stores/marker";
-import * as THREE from "three";
 
 const Earth = (props) => {
   const { nodes, materials } = useGLTF("/earth.gltf");
   const activateColombia = useMarkerStore((state) => state.activateColombia);
+  const activateCanada = useMarkerStore((state) => state.activateCanada);
+  const colombiaMarkerActive = useMarkerStore(
+    (state) => state.colombiaMarkerActive
+  );
+  const canadaMarkerActive = useMarkerStore(
+    (state) => state.canadaMarkerActive
+  );
 
   return (
     <group position={[0, 0, 0]} rotation={[0, 0, 0]} {...props} dispose={null}>
@@ -24,9 +30,12 @@ const Earth = (props) => {
         material={materials["Scene_-_Root"]}
         scale={1}
       ></mesh>
-      <Marker color="#406AFF" text="colombia" />
-      <Marker color="red" text="canada" />
-      <axesHelper args={[5]} />
+      <Marker
+        color="#406AFF"
+        text="colombia"
+        activeMarker={colombiaMarkerActive}
+      />
+      <Marker color="#58B177" text="canada" activeMarker={canadaMarkerActive} />
 
       <Html
         style={{
@@ -39,7 +48,10 @@ const Earth = (props) => {
         }}
         fullscreen
       >
-        <button className="btn font-semibold text-secondary m-4">
+        <button
+          className="btn font-semibold text-secondary m-4"
+          onClick={activateCanada}
+        >
           Where in Canada?
         </button>
         <button

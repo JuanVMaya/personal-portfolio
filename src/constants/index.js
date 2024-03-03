@@ -73,12 +73,14 @@ export const markers = {
   canada: {
     position: [0.18, 0.75, 0.75],
     rotation: [Math.PI / 3, 0, Math.PI * 0.9],
-    name: "Canada",
+    name: "Ontario",
+    textColor: "primary",
   },
   colombia: {
     position: [0.31, 0.05, 1.01],
     rotation: [Math.PI / 2, 0, Math.PI * 0.9],
     name: "Colombia",
+    textColor: "secondary",
   },
 };
 
