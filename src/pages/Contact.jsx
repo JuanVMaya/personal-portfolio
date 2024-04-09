@@ -1,22 +1,31 @@
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 
 import useAlert from "../hooks/useAlert";
 import { Alert } from "../components";
+import { Canvas } from "@react-three/fiber";
+import { Environment } from "@react-three/drei";
+import Bird from "../../public/Bird";
+import Loader from "../components/Loader";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState("Teratorn_Idle");
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
 
+  const handleFocus = () => setCurrentAnimation("Teratorn_Walk");
+  const handleBlur = () => setCurrentAnimation("Teratorn_Idle");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setCurrentAnimation("Teratorn_Transition-Flying");
 
     emailjs
       .send(
@@ -34,6 +43,8 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          setCurrentAnimation("Teratorn_Flying-Idle");
+
           showAlert({
             show: true,
             text: "Thank you for your message. I'll reply shortly!",
@@ -51,6 +62,7 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
+
           console.error(error);
 
           showAlert({
@@ -59,6 +71,11 @@ const Contact = () => {
             type: "danger",
           });
         }
+      )
+      .finally(() =>
+        setTimeout(() => {
+          setCurrentAnimation("Teratorn_Idle");
+        }, 3000)
       );
   };
 
@@ -86,6 +103,8 @@ const Contact = () => {
               required
               value={form.name}
               onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
               className="input input-bordered w-full max-w-xs"
             />
           </label>
@@ -102,6 +121,8 @@ const Contact = () => {
               required
               value={form.email}
               onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
               className="input input-bordered w-full max-w-xs"
             />
           </label>
@@ -120,6 +141,8 @@ const Contact = () => {
               required
               value={form.message}
               onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
             />
           </label>
           <button
@@ -132,7 +155,28 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]"></div>
+      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
+        <Canvas
+          camera={{ position: [-1.5, 1, 2], fov: 75, near: 0.1 }}
+          className={` flex justify-center items-center bg-transparent hover:cursor-grab`}
+        >
+          <ambientLight intensity={0.5} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            intensity={2}
+          />
+          <Suspense fallback={<Loader />}>
+            <Bird
+              position={[0, -4.25, -11.5]}
+              scale={1}
+              currentAnimation={currentAnimation}
+            />
+          </Suspense>
+          <Environment preset="sunset" />
+        </Canvas>
+      </div>
     </section>
   );
 };
