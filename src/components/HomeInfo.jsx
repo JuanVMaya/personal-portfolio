@@ -9,7 +9,7 @@ const HomeInfo = () => {
   return (
     <div className="hero min-h-[calc(100vh-96px)]">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="max-w-sm rounded-lg shadow-2xl">
+        <div className=" rounded-lg shadow-2xl max-w-72 lg:max-w-sm">
           <Canvas
             camera={{ position: [0, 3, 3], fov: 50, rotation: [1, 1, 0] }}
             className={` flex justify-center items-center bg-transparent hover:cursor-grab`}
@@ -32,7 +32,7 @@ const HomeInfo = () => {
           </Canvas>
         </div>
 
-        <div>
+        <div className="text-center lg:text-left">
           <h2 className="py-4 text-2xl text-primary">Hello I'm</h2>
           <h1 className="text-5xl font-bold">
             <span className="bg-slate-200 rounded-md">&nbsp;Juan </span> Jose
