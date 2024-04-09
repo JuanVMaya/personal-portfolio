@@ -98,10 +98,10 @@ export const projects = [
   {
     iconUrl: etsy,
     theme: "icon-card-back-orange",
-    name: "Etsy Shop - The One TCG",
+    name: "Etsy Shop - The One Vault",
     description:
-      "Live Etsy shop specializes in 3D printed items, offering a range of custom-designed product for TCG (Trading Card Games) items, that blend modern engineering desing technology with personal touch. Basically, overengineered  accesories for card gamers.",
-    link: "https://theonetcg.etsy.com",
+      "Over 500 sales in Etsy shop specialized in 3D printed items, offering a range of custom-designed product for TCG (Trading Card Games) items, that blend modern engineering desing technology with personal touch. Basically, overengineered  accesories for card gamers.",
+    link: "https://www.etsy.com/shop/TheOneVault",
     hasLiveLink: true,
   },
   {
