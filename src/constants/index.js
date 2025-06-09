@@ -1,4 +1,4 @@
-import { bittele, carrier, seneca } from "../assets/images";
+import { bittele, honeywell, seneca } from "../assets/images";
 import {
   contact,
   css,
@@ -30,9 +30,9 @@ import {
 export const experiences = [
   {
     title: "Full Stack Developer",
-    company_name: "Carrier - Supra Systems/Brokerbay",
-    icon: carrier,
-    iconBg: "#a2d2ff",
+    company_name: "Honeywell - Supra Systems/Brokerbay",
+    icon: honeywell,
+    iconBg: "#ebdedd",
     date: "Sept 2022 - Present",
     points: [
       "Developing and maintaining web applications using React.js, Typescript, and other related technologies.",
